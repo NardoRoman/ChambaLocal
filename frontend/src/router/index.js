@@ -4,6 +4,7 @@ import Login from '../views/Login.vue';
 import Register from '../views/Register.vue';
 import Dashboard from '../views/Dashboard.vue';
 import MapExplorer from '../views/MapExplorer.vue';
+import CreateJob from '../views/CreateJob.vue';
 import { useAuthStore } from '../store/auth.store';
 
 const routes = [
@@ -11,6 +12,7 @@ const routes = [
   { path: '/login', name: 'Login', component: Login, meta: { guest: true } },
   { path: '/register', name: 'Register', component: Register, meta: { guest: true } },
   { path: '/dashboard', name: 'Dashboard', component: Dashboard, meta: { requiresAuth: true } },
+  { path: '/crear-trabajo', name: 'CreateJob', component: CreateJob, meta: { requiresAuth: true } },
   { path: '/map', name: 'MapExplorer', component: MapExplorer }
 ];
 
