@@ -46,6 +46,9 @@ const jobSchema = new mongoose.Schema({
             type: mongoose.Schema.ObjectId,
             ref: 'User'
         },
+        message: {
+            type: String
+        },
         status: {
             type: String,
             enum: ['Pendiente', 'Rechazado', 'Aceptado'],
@@ -55,7 +58,11 @@ const jobSchema = new mongoose.Schema({
             type: Date,
             default: Date.now
         }
-    }]
+    }],
+    reviewed: {
+        type: Boolean,
+        default: false
+    }
 }, {
     timestamps: true
 });
